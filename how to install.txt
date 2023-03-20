@@ -2,10 +2,12 @@ Clone this project
 
 HOW TO START
 in floder [path: Music_recomendation_web-app]
+open cmd terminal
+
 > pip install django
 > cd Music_recomend_project [path: Music_recomendation_web-app/Music_recomend_project]
 > env\scripts\activate
-> cd Music_recomendations_system
+> cd Music_recomendations_system [path: Music_recomendation_web-app/Music_recomend_project/Music_recomendations_system]
 > pip install -r requirement.txt
 > python manage.py runserver (for runserver and click link to web application)
 
