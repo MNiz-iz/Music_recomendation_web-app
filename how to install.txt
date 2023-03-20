@@ -1,5 +1,9 @@
+Clone this project
+
+HOW TO START
+in floder [path: Music_recomendation_web-app]
 > pip install django
-> cd Music_recomend_project
+> cd Music_recomend_project [path: Music_recomendation_web-app/Music_recomend_project]
 > env\scripts\activate
 > cd Music_recomendations_system
 > pip install -r requirement.txt
