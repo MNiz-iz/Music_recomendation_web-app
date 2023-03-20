@@ -13,12 +13,20 @@ SEGMENT OF THIS PROJECT :3 SEGMENT
 
 
 THIS PROJECT USE
-The data set for learning is GTZAN Dataset - Music Genre Classification [https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification] 
-The model for learning features and classify is Artificial Neural Network
-And Python library Such as 
+-The data set for learning is GTZAN Dataset - Music Genre Classification [http://marsyas.info/downloads/datasets.html] 
+-The model for learning features and classify is Artificial Neural Network
+-And Python library Such as 
 >librosa
 >tensorflow
 >keras
 web Framework : Django
 
 you can see the demo in this video. https://drive.google.com/file/d/1BjCkkU1UG0M0JikfSEWLV6eS9-Q70wN3/view?usp=share_link
+
+sources
+Python Project – Music Genre Classification : https://data-flair.training/blogs/python-project-music-genre-classification/
+Music Genre Classification with Python : https://medium.com/analytics-vidhya/music-genre-classification-with-python-51bff77adfd6
+Implementing a neural network for music genre classification : https://www.youtube.com/watch?v=_xcFAiufwd0
+Audio Processing Features & CNN Training : https://www.kaggle.com/volkandl/audio-processing-features-cnn-training/notebook
+Neural Network Algorithm : https://guopai.github.io/ml-blog14.html
+
