@@ -6,4 +6,19 @@ my project group in AI class (This project is for educational purposes only. Tha
 
 In this project, you can put music files(such as .mp3) that you want to get recomendations. And the back-end will extract the feature of this input to find out what Genre of song is the song that is inserted. in order to recommend songs in the same genre for you
 
+SEGMENT OF THIS PROJECT :3 SEGMENT
+1. input the new song as file an extract feature for classification
+2. classification genre of song is input
+3. recommend new songs in the same genre of the input song
+
+
+THIS PROJECT USE
+The data set for learning is GTZAN Dataset - Music Genre Classification [https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification] 
+The model for learning features and classify is Artificial Neural Network
+And Python library Such as 
+>librosa
+>tensorflow
+>keras
+web Framework : Django
+
 you can see the demo in this video. https://drive.google.com/file/d/1BjCkkU1UG0M0JikfSEWLV6eS9-Q70wN3/view?usp=share_link
