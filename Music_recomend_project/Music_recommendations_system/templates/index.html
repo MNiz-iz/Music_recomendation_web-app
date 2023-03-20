@@ -1,0 +1,179 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+    <script src="/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static '/scss/loding.css' %}">
+    <link rel="stylesheet" href="{% static '/scss/index.css' %}">
+    <link rel="stylesheet" href="{% static '/scss/result.css' %}">
+    <link rel="stylesheet" href="{% static '/scss/footer.css' %}">
+    <link rel="stylesheet" href="{% static '/scss/style.css' %}">
+
+    <title>Music Recommendation System</title>
+	<mylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"eta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="{% static 'https://kit.fontawesome.com/21a2e7c776.js' %}" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<script src="https://kit.fontawesome.com/21a2e7c776.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body style="background-color: #FFF5FD;">
+<navbar class="ftco-section">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <img src="{% static '/image/Logo.svg' %}" alt="Logo">
+            <h class="navbar-brand" href="#">Music Recommendation System</h>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars"></span> Menu
+          </button>
+          <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="http://127.0.0.1:8000/" class="nav-link"> <i class="fas fa-home" alt="Home"></i> </a></li>
+                <li class="nav-item"><a href="#Music" class="nav-link"> <i class="fas fa-headphones-alt" alt="Music"></i> </a></li>
+                <li class="nav-item dropdown position-static">
+            </ul>
+          </div>
+        </div>
+      </nav>
+<!-- END nav -->
+  </div>
+</navbar>
+
+	<script src="static/js/jquery.min.js"></script>
+  	<script src="static/js/popper.js"></script>
+  	<script src="static/js/bootstrap.min.js"></script>
+  	<script src="static/js/main.js"></script>
+
+    <nav id="header" style="position:top"></nav>
+ 
+    <section>       
+        <div id="Box-main" >
+            <div id="Music">
+                <p id="Box-Gen" style="text-align: center;">10 Genres of Music</p> 
+            </div>
+                <ul tyle="text-align: center;">&#127927;blues &#127931;classical &#127928;country &#127929;disco &#127932;hiphop &#127930;jazz &#127926;metal &#127908;pop &#127905;reggae &#128274;rock</ul>                
+        </div>
+        <div style="width:100%a; height:auto;">
+        <div class="blues">
+            <img src="https://images.pexels.com/photos/733767/pexels-photo-733767.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="blues" width="40.5%" height="auto">
+            <div class="Text-blues">blues</div>
+        </div>
+    
+        <div class="classical">
+            <img src="https://images.pexels.com/photos/697672/pexels-photo-697672.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="classical" width="81%" height="auto">
+            <div class="Text-classical">classical</div>
+        </div>
+    
+        <div class="country">
+            <img src="https://images.pexels.com/photos/5909612/pexels-photo-5909612.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="country" width="40.5%" height="auto">
+            <div class="Text-country">country</div>
+        </div>
+    
+        <div class="disco">
+            <img src="https://images.pexels.com/photos/8131392/pexels-photo-8131392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="disco" width="112%" height="auto">
+            <div class="Text-disco">disco</div>
+        </div>
+    
+        <div class="hiphop">
+            <img src="https://images.pexels.com/photos/1238980/pexels-photo-1238980.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="hiphop" width="40.5%" height="auto">
+            <div class="Text-hiphop">hiphop</div>
+        </div>
+    
+        <div class="jazz">
+            <img src="https://images.pexels.com/photos/442540/pexels-photo-442540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="jazz" width="80.5%" height="auto">
+            <div class="Text-jazz">jazz</div>
+        </div>
+    
+        <div class="metal">
+            <img src="https://images.pexels.com/photos/922322/pexels-photo-922322.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="metal" width="81%" height="auto">
+            <div class="Text-metal">metal</div>
+        </div>
+    
+        <div class="pop">
+            <img src="https://images.pexels.com/photos/761963/pexels-photo-761963.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="pop" width="40.5%" height="auto">
+            <div class="Text-pop">pop</div>
+        </div>
+    
+        <div class="reggae">
+            <img src="https://images.pexels.com/photos/5471751/pexels-photo-5471751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' %}" alt="reggae" width="40.5%" height="auto">
+            <div class="Text-reggae">reggae</div>
+        </div>
+    
+        <div class="rock">
+            <img src="https://images.pexels.com/photos/167626/pexels-photo-167626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="rock" width="80%" height="auto">
+            <div class="Text-rock">rock</div>
+        </div>
+          
+    </section>
+
+    <section id="Box-main">
+        <div id="Text-UpLoad">
+            <p id="Box-Font">Search for music of the same genre by wav file</p>                
+        </div>
+
+        <!-- Upload File-->
+        <div id="Box-Upload" class="content">
+            <form action="{% url 'result' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="file" name='document' multiple="" class="up-input">
+                <p class="up-p">click in here to upload music</p>
+                <button type="submit" class="submit-form" id="myButton1" onclick="change();">Upload</button>
+            </form>            
+        </div>
+
+        <script>
+           $('#myButton1').click(function(){
+                $(this).html("processing...").prop(); 
+                    setTimeout(function () { 
+                    $('#myButton1').show();
+                }, 2000);
+            });
+        </script>
+
+        <div class="loader-wrapper">
+            <span class="loader"><span class="loader-inner"></span></span>
+        </div>
+
+    </section>
+        
+    <footer id="footer" style="position: relative; margin-top: 178%; margin-bottom: 0%;"></footer>
+    
+    <script>
+    $(document).ready(function(){
+        $('.up-input').change(function () {
+            $('.up-p').text(this.files.length + " file(s) selected");
+        });
+    });
+    </script>
+
+    <script> 
+        $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut("slow");
+          });
+          $(function(){ $("#header").load("navbar.html") });
+          $(function(){ $("#footer").load("footer.html") });
+    </script> 
+    <script src="static/js/popper.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/main.js"></script>
+
+    <footer>
+        <u>
+          <l><a href="http://marsyas.info/downloads/datasets.html">Dataset</a></l>
+          <l><a href="https://medium.com/analytics-vidhya/music-genre-classification-with-python-51bff77adfd6">Source</a></l>
+          <l><a href= # >Report</a></l>
+          <l><a href="https://github.com/">Github</a></l>
+          <l><p style= "font-size:30px;">💃</p></l>
+        </u>
+    </footer>
+
+</body>
+</html>

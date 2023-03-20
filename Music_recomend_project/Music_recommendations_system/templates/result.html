@@ -1,0 +1,342 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+    <script src="{% static '/js/jquery.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static '/scss/loding.css' %}">
+    <link rel="stylesheet" href="{% static '/scss/index.css' %}">
+    <link rel="stylesheet" href="{% static '/scss/result.css' %}">
+    <link rel="stylesheet" href="{% static '/scss/style.css' %}">
+    <link rel="stylesheet" href="{% static '/scss/footer.css' %}">
+
+    <title>Music Recommendation System</title>
+    <meta charset="utf-8">
+    <mylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet"eta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<script src="https://kit.fontawesome.com/21a2e7c776.js" crossorigin="anonymous"></script>
+
+    <title>Music Recommendation System Result</title>
+</head>
+
+<body style="background-color: #FFF5FD;">
+    <navbar class="ftco-section">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar">
+            <div class="container">
+                <img src="{% static '/image/Logo.svg' %}" alt="Logo">
+                <h class="navbar-brand" href="#">Music Recommendation System</h>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span> Menu
+              </button>
+              <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="http://127.0.0.1:8000/" class="nav-link"> <i class="fas fa-home" alt="Home"></i> </a></li>
+                    <li class="nav-item"><a href="#Music" class="nav-link"> <i class="fas fa-headphones-alt" alt="Music"></i> </a></li>
+                    <li class="nav-item dropdown position-static">
+                </ul>
+              </div>
+            </div>
+          </nav>
+    <!-- END nav -->
+      </div>
+    </navbar>
+
+    <section id="Box-main">
+        <div id="Text-UpLoad">
+            <p id="Box-Font" style="margin-top:5%;">Genre of this song is..&#128302;</p>          
+        </div>
+        <div>
+            <!--- แสดงเพลง --->
+            <p id="output"></p>
+        </div>
+        
+    </section>
+
+    <footer id="footer" style="position: relative; margin-top: 65%; margin-bottom: 0%;"></footer>
+    
+    <script> 
+        $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut("slow");
+          });
+        $(function(){ $("#header").load("navbar.html") });
+        $(function(){ $("#footer").load("footer.html") });
+    </script> 
+    <script src="{% static '/js/popper.js' %}"></script>
+    <script src="{% static '/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'static/js/main.js' %}"></script>
+    <script> function result(){
+
+        var song= {
+            
+            JAZZ : {
+                name1: "Rivers & Parks",
+                artist1: "Johnathan Blake",
+    
+                name2: "Black Rhythm Happening",
+                artist2: "Makaya McCraven",
+    
+                name3: "Hjertebarn",
+                artist3: "Bremer/McCoy",
+    
+                name4: "A.O.E",
+                artist4: "Portico Quartet",
+    
+                name5: "Celestial Greens",
+                artist5: "Vels Trio"
+            },
+    
+            CLASSICAL : {
+                name1: "Present",
+                artist1: "Khalid",
+    
+                name2: "Somebody",
+                artist2: "Keshi",
+    
+                name3: "Ride",
+                artist3: "HYBS",
+    
+                name4: "Mess U Made",
+                artist4: "Michelle",
+    
+                name5: "Blue Skies",
+                artist5: "Kaisha"
+            },
+    
+            BLUES : {
+                name1: "Rollin' On",
+                artist1: "Jackie Venson",
+    
+                name2: "Keep My Cool",
+                artist2: "Eric Bibb",
+    
+                name3: "Never Leave You",
+                artist3: "The Record Company",
+    
+                name4: "Love On the Rocks",
+                artist4: "Lauren Anderson",
+    
+                name5: "Bring on the Pain",
+                artist5: "Ally Venable, Kenny Wayne Shepherd"
+            },
+    
+            REGGAE : {
+                name1: "Dream Land",
+                artist1: "Bunny Wailer",
+    
+                name2: "Do It Right",
+                artist2: "The Three Tops",
+    
+                name3: "Leggo Skanga",
+                artist3: "Rupie Edwards",
+    
+                name4: "Think About That",
+                artist4: "Danny Livingstone",
+    
+                name5: "What Will Your Mama Say",
+                artist5: "Clancy Eccles"
+            },
+    
+            POP : {
+                name1: "SG",
+                artist1: "DJ Snake, Ozuna, Megan Thee Stallion, LISA",
+    
+                name2: "Somebody",
+                artist2: "Keshi",
+    
+                name3: "Easy on Me",
+                artist3: "Adele",
+    
+                name4: "Angel Baby",
+                artist4: "Troya Sivan",
+    
+                name5: "Overpass Graffiti",
+                artist5: "Ed Sheeran"
+            },
+    
+            ROCK : {
+                name1: "In The End",
+                artist1: "Linkin Park",
+    
+                name2: "Mr.Brightside",
+                artist2: "The killers",
+    
+                name3: "You Know You're Right",
+                artist3: "Nirvana",
+    
+                name4: "The Middle",
+                artist4: "Jimmy Eat World",
+    
+                name5: "Woman",
+                artist5: "Wolfmother"
+            },
+    
+            HIPHOP : {
+                name1: "West",
+                artist1: "Warren Hue",
+    
+                name2: "Demon high",
+                artist2: "Lil Uzi Vert",
+    
+                name3: "Sandman",
+                artist3: "A$AP Rocky",
+    
+                name4: "I don't really care",
+                artist4: "French Montana",
+    
+                name5: "What a life",
+                artist5: "Big Sean, Hit-Boy"
+            },
+    
+            METAL : {
+                name1: "Hit the floor",
+                artist1: "Linkin Park",
+    
+                name2: "People = Shit",
+                artist2: "Slipknot",
+    
+                name3: "Infected",
+                artist3: "Starset",
+    
+                name4: "Goodbye",
+                artist4: "Limp Bizkit",
+    
+                name5: "Bury the light",
+                artist5: "Casey Edwards, Victor Borba"
+            },
+    
+            DISCO : {
+                name1: "Le Freak",
+                artist1: "Chic",
+    
+                name2: "It's Raining Men",
+                artist2: "The Weather Girlst",
+    
+                name3: "The Hustle",
+                artist3: "Van McCoy",
+    
+                name4: "Boogie Oogie Oogie",
+                artist4: "ATaste Of Honey",
+    
+                name5: "Shame",
+                artist5: "Evelyn Champagne King"
+            },
+    
+            COUNTRY : {
+                name1: "Country Roads",
+                artist1: "John Denver",
+    
+                name2: "You Belong With Me",
+                artist2: "Taylor Swift",
+    
+                name3: "What about now",
+                artist3: "Lonestar",
+    
+                name4: "Somebody Like You",
+                artist4: "Keith Urban",
+    
+                name5: "I Go Back",
+                artist5: "Kenny Chesney"
+            }
+        }
+        
+        var inputgenre = '{{genre}}' ;//genre ที่ได้จาก backend
+        var genre = inputgenre.toUpperCase();
+        var definition = song[genre];
+        var output=document.getElementById("output");
+        
+        output.innerHTML=`
+        <div id="Text-UpLoad">
+            <!--- ใส่ประเภทของเพลงที่ประมวลผลได้ ---> 
+            <p id="Box-Font" style="margin-top:-33%; margin-left:35%; font-size: 3.6vmax; background-color:pink; width:26%; height:26%; border-radius: 30px;">
+                ${genre}</p>    
+        </div> 
+        <div class="Resemble">
+            <p  id="Music" >&#127925; Recommended song of the same genre</p>
+        </div>
+        <div style="margin-top:5%">
+            <!--Music 1 -->
+            <div type="submit" id="Box-ms" href="#">  
+                <!-- รับชื่อเพลงที่ 1 -->
+                <div class="TextL1">
+                    <p>Song : ${definition.name1} </p>
+                </div>
+                <!-- รับชื่อศิลปินเพลงที่ 1 -->
+                <div class="TextL2">
+                    <p>Artist : ${definition.artist1} </p>
+                </div>
+                <img src="{% static '/image/Logo.svg' %}" alt="Music1"style="width:5%;height: auto; margin-top:0.3%; margin-left:0.5%">
+            </div>
+    
+            <!--Music 2 -->
+            <div type="submit" id="Box-ms" href="#" style="margin-top: 8%">  
+                <!-- รับชื่อเพลงที่ 2 -->
+                <div class="TextL1">
+                    <p>Song : ${definition.name2} </p>
+                </div>
+                <!-- รับชื่อศิลปินเพลงที่ 2 -->
+                <div class="TextL2">
+                    <p>Artist : ${definition.artist2} </p>
+                </div>
+                <img src="{% static '/image/Logo.svg' %}" alt="Music1"style="width:5%;height: auto; margin-top:0.3%; margin-left:0.5%">
+            </div>
+            
+            <!--Music 3 -->
+            <div type="submit" id="Box-ms" href="#" style="margin-top: 16%">  
+                <!-- รับชื่อเพลงที่ 3 -->
+                <div class="TextL1">
+                    <p>Song : ${definition.name3} </p>
+                </div>
+                <!-- รับชื่อศิลปินเพลงที่ 3 -->
+                <div class="TextL2">
+                    <p>Artist : ${definition.artist3} </p>
+                </div>
+                <img src="{% static '/image/Logo.svg' %}" alt="Music1"style="width:5%;height: auto; margin-top:0.3%; margin-left:0.5%">
+            </div>
+    
+            <!--Music 4 -->
+            <div type="submit" id="Box-ms" href="#" style="margin-top: 24%">  
+                <!-- รับชื่อเพลงที่ 4 -->
+                <div class="TextL1">
+                    <p>Song : ${definition.name4} </p>
+                </div>
+                <!-- รับชื่อศิลปินเพลงที่ 4 -->
+                <div class="TextL2">
+                    <p>Artist : ${definition.artist4} </p>
+                </div>
+                <img src="{% static '/image/Logo.svg' %}" alt="Music1"style="width:5%;height: auto; margin-top:0.3%; margin-left:0.5%">
+            </div>
+    
+            <!--Music 5 -->
+            <div type="submit" id="Box-ms" href="#" style="margin-top: 32%">  
+                <!-- รับชื่อเพลงที่ 5 -->
+                <div class="TextL1">
+                    <p>Song : ${definition.name5} </p>
+                </div>
+                <!-- รับชื่อศิลปินเพลงที่ 5 -->
+                <div class="TextL2">
+                    <p>Artist : ${definition.artist5} </p>
+                </div>
+                <img src="{% static '/image/Logo.svg' %}" alt="Music1"style="width:5%;height: auto; margin-top:0.3%; margin-left:0.5%">
+            </div>
+        </div>`;
+        
+    };
+    
+    result(); </script>
+
+    <footer>
+        <u>
+          <l><a href="http://marsyas.info/downloads/datasets.html">Dataset</a></l>
+          <l><a href="https://medium.com/analytics-vidhya/music-genre-classification-with-python-51bff77adfd6">Source</a></l>
+          <l><a href= # >Report</a></l>
+          <l><a href="https://github.com/">Github</a></l>
+          <l><p style= "font-size:30px;">💃</p></l>
+        </u>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,8 @@
+> pip install django
+> cd Music_recomend_project
+> env\scripts\activate
+> cd Music_recomendations_system
+> pip install -r requirement.txt
+> python manage.py runserver (for runserver and click link to web application)
+
+## you can read a manual for how to install and how to use in document(thai_ver).pdf

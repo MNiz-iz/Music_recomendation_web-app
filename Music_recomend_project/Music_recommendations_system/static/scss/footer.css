@@ -1,0 +1,59 @@
+u {
+  display: inline-grid;
+  grid-gap: 24px;
+  grid-auto-flow: row;
+  align-items: center;
+  justify-items: center;
+  margin: auto;
+}
+
+@media (min-width: 500px) {
+  u {
+    grid-auto-flow: column;
+  }
+}
+
+a {
+  color: #c36b7a;
+  text-decoration: none;
+  box-shadow: inset 0 -1.2px 0 hsla(0, 0%, 100%, 0.5);
+}
+
+a:hover {
+  box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.5);
+}
+
+l:last-child {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+l:hover ~ l p {
+  animation: wave-animation 0.3s infinite;
+}
+
+/* below is just for demo styling */
+
+footer {
+  display: flex;
+  background-color: #ffc0cb;
+  line-height: 1.3;
+  font-family: Roboto;
+  width: 100%;
+  text-align: center;
+  bottom: 0px;
+  padding-top: 5px;
+}
+
+@keyframes wave-animation {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+}
